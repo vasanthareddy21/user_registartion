@@ -21,9 +21,12 @@ def registration(request):
             MPFDO.save()
             send_mail('registration',
                              'Thank you, you have registered successfully',
-                             'vasanthareddya9@gmail.ocm',
+                             'annapureddy.vasundhara@gmail.com',
                              [MUFDO.email],
                              fail_silently=False)
             return HttpResponse('registration successfully')
 
     return render(request,'registration.html',d)
+
+def home(request):
+    return render(request,'home.html')

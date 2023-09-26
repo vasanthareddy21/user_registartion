@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- <img src="{% static 'images/grrenary.jpg' %}" alt="" id="image" height="95%" width="100%"> -->
+    <nav class="conatiner-fluid" style="background-color: rgb(150, 11, 122);">
+        <a class='nav-link' href="{% url 'admin:index' %}">Admin</a>
+        <a class='nav-link' href="{% url 'home' %}">Home page</a>
+        <a class='nav-link' href="{% url 'registration' %}">Registration page</a>
+    </nav>
+
+    {% block body_block %}
+    {% endblock %}
+  <script src="{% static 'js/mdb.min.js' %}"></script>  
+</body>
+</html>

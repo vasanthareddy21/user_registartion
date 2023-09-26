@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <center>
-        <h1>registration</h1>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
+{% extends 'dummy.html' %}
+{% load static %}
 
+
+
+    {% block title %}
+    <title>Registration Page</title>
+    
+
+    {% endblock %}
+    
+    {% block body_block %}
+    
+    <center>
+        
+        <h1 style="color: indigo;">Registration</h1>
+        <form method="POST" enctype="multipart/form-data" style="background: url(../static/images/grrenary.jpg);
+                                                                background-repeat:no-repeat;
+                                                                ">
+            {% csrf_token %}
             {{UFO.as_p}}
             {{PFO.as_p}}
 
             <input type="submit" value="registration">
         </form>
     </center>
-</body>
-</html>
+    {% endblock %}

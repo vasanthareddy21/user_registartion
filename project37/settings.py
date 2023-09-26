@@ -19,6 +19,8 @@ TEMPLATE_DIR=os.path.join(BASE_DIR,'templates')
 
 MEDIA_DIR=os.path.join(BASE_DIR,'media')
 
+STATIC_DIR=os.path.join(BASE_DIR,'static')
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -134,14 +136,17 @@ MEDIA_ROOT=MEDIA_DIR
 
 EMAIL_HOST='smtp.gmail.com'
 
-EMAIL_HOST_USERNAME='vasnthareddya9@gmail.com'
+EMAIL_HOST_USER='annapureddy.vasundhara@gmail.com'#sender mail_id
 
-EMAIL_HOST_PASSWORD=''
+EMAIL_HOST_PASSWORD='vvug kuoi drsc djpy'
+#App password(click on mail Profile,click on manage your google accont,security,2 - step verification(turn on),scroll down (choose app paasword)
 
 EMAIL_USE_TLS=True
 
 EMAIL_USE_SSL=False
 
 EMAIL_PORT=587
+
+STATICFILES_DIRS=[STATIC_DIR,]
 
 
