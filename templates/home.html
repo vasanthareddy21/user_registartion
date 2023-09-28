@@ -6,7 +6,11 @@
 
 {% block body_block %}
 <center>
-<h1 style="color: darkgreen;
-           font-style:italic;">Welcome to Home Page</h1>
+    {% if username %}
+       <h1 style="color: rgb(15, 102, 102);">Welcome to home MR/MS {{username}}</h1>
+    {% else %}
+       <h1 style="color: blue;">Welcome to Home Page</h1>
+    {% endif %}
+
 </center>
 {% endblock %}
